@@ -1,0 +1,277 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* Cor de fundo principal: um rosa bem claro e suave */
+    background-color: #FFF0F5; /* Lavender Blush */
+}
+
+.inicio {
+    display: flex;
+    height: 100vh;
+}
+
+.foto{
+    flex: 1;
+    /* Fundo da foto: um rosa um pouco mais saturado */
+    background-color: #FFE4E1; /* Misty Rose */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto img{
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.infos {
+    flex: 2;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.infos h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.infos h2{
+    font-size: 24px;
+    /* Cor de destaque para subtítulos: um rosa escuro e elegante */
+    color: #C27E9A; /* Um tom de rosa antigo */
+    margin-top: 10px;
+}
+
+.infos p{
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.social{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    margin-top: 1.4rem;
+}
+
+.social a {
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    /* Cor dos ícones e bordas: o mesmo rosa escuro */
+    color: #C27E9A;
+    border: 1.6px solid #C27E9A;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    padding: 0.39rem;
+    text-align: center;
+}
+
+.social a:hover {
+    /* Efeito hover: inverte as cores */
+    color: #FFF0F5; /* O rosa claro do fundo */
+    background-color: #C27E9A;
+}
+
+footer{
+    /* Fundo do rodapé: um tom mais escuro e sóbrio */
+    background-color: #8B5E66; /* Um rosa antigo mais escuro */
+    color: #FFF0F5; /* Texto com o rosa claro */
+    text-align: center;
+    padding: 20px;
+}
+
+footer p{
+    margin: 0;
+    font-family: "Libre Baskerville", serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sobre {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #FFF0F5; /* Mantém o fundo principal */
+    padding: 60px 80px;
+    gap: 40px;
+}
+
+.sobre-mim p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 90%;
+    text-align: justify;
+}
+
+.linha {
+    width: wrap;
+    height: 4px;
+    /* Cor da linha decorativa: rosa escuro */
+    background-color: #C27E9A;
+    margin-bottom: 20px;
+    border-radius: 2px;
+}
+
+.linha-fina {
+    width: wrap;
+    height: 2px;
+    /* Cor da linha decorativa: rosa escuro */
+    background-color: #C27E9A;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border-radius: 2px;
+}
+
+.sobre-mim, .skills {
+    flex: 1;
+    min-width: 300px;
+}
+
+.sobre-mim h2, .skills h2{
+    font-size: 32px;
+    color: #C27E9A;
+    margin-bottom: 10px;
+}
+
+.skills h3{
+    font-size: 22px;
+    color: #C27E9A;
+    margin-bottom: 8px;
+}
+
+.skills ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skills li{
+    font-size: 18px;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.skills li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    /* Cor do ícone de check */
+    color: #8B5E66;
+}
+
+.experiencias {
+    display: flex;
+    flex-wrap: wrap;
+    /* Fundo da seção de experiências: o mesmo rosa da foto */
+    background-color: #FFE4E1; /* Misty Rose */
+    padding: 60px 80px;
+    gap: 40px
+}
+
+.formacao, .experiencia {
+    flex: 1;
+    min-width: 300px;
+}
+
+.formacao h2, .experiencia h2 {
+    font-size: 32px;
+    /* Cor dos títulos nesta seção: um tom escuro para contraste */
+    color: #5C3D42; /* Um marrom rosado bem escuro */
+    margin-bottom: 10px
+}
+
+.item {
+    margin-bottom: 30px;
+}
+
+.data {
+    font-weight: bold;
+    color: #5C3D42;
+    font-size: 16px;
+}
+
+.item h3 {
+    margin: 5px 0;
+    font-size: 20px;
+    color: #744C57; /* Um tom intermediário */
+}
+
+.item p {
+    margin: 0;
+    font-size: 16px;
+    color: #5C3D42;
+}
+
+/* ========================================= */
+/* NOTACÕES DE RESPONSIVIDADE       */
+/* ========================================= */
+
+/* Para tablets e celulares em modo paisagem (telas até 768px) */
+@media (max-width: 768px) {
+
+    /* Empilha as seções que antes ficavam lado a lado */
+    .inicio {
+        flex-direction: column;
+        height: auto; /* A altura se ajusta ao conteúdo */
+        text-align: center; /* Centraliza o texto na seção inicial */
+    }
+
+    .foto {
+        /* O padding simula uma margem para a foto não colar no topo */
+        padding-top: 40px;
+    }
+
+    .social {
+        justify-content: center; /* Centraliza os ícones sociais */
+    }
+
+    /* Reduz os espaçamentos (padding) laterais para telas menores */
+    .infos, .sobre, .experiencias {
+        padding: 40px 30px;
+    }
+
+    .sobre-mim p {
+        max-width: 100%; /* Permite que o texto ocupe toda a largura */
+    }
+
+    /* Reduz o tamanho das fontes principais para caber melhor na tela */
+    .infos h1 {
+        font-size: 36px;
+    }
+
+    .sobre-mim h2, .skills h2, .formacao h2, .experiencia h2 {
+        font-size: 28px;
+    }
+}
+
+/* Para celulares em modo retrato (telas até 480px) */
+@media (max-width: 480px) {
+
+    /* Diminui ainda mais os espaçamentos */
+    .infos, .sobre, .experiencias {
+        padding: 30px 20px;
+    }
+
+    .infos h1 {
+        font-size: 32px;
+    }
+
+    .infos h2 {
+        font-size: 20px;
+    }
+
+    .sobre-mim h2, .skills h2, .formacao h2, .experiencia h2 {
+        font-size: 26px;
+    }
+    
+    .infos p, .sobre-mim p, .skills li {
+        font-size: 17px;
+    }
+
+    .foto img{
+        width: 250px; /* Diminui um pouco a foto em telas muito pequenas */
+    }
+}
